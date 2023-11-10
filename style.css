@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-image: url("./img/coffee_image.png");
+  border: 2px solid;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cont {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  border: 3px solid red;
+}
+
+.cont nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.cont nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.cont nav .ul1 {
+  gap: 60px;
+}
+
+.cont nav .ul1 > li > a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (max-width: 800px) {
+  .cont nav .ul1 {
+    display: none;
+  }
+}
+
+.cont nav .ul2 {
+  gap: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont nav .ul2 .btn1 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cont nav .ul2 .btn2 {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  background-color: #f9c06a;
+  display: inline-block;
+  width: 100px;
+  height: 48px;
+  border-radius: 24px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+/*# sourceMappingURL=style.css.map */
