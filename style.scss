@@ -92,10 +92,17 @@ header::before {
 
     & > h2 {
       @include styleText(#fff, 22px, 500, normal);
+      @media (max-width: 600px) {
+        text-align: center;
+      }
     }
     & > h1 {
       @include styleText(#fff, 220px, 400, normal);
       font-family: Clicker Script;
+      @media (max-width: 600px) {
+        text-align: center;
+        @include styleText(#fff, 150px, 400, normal);
+      }
     }
 
     & > p {

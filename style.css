@@ -117,12 +117,28 @@ header::before {
   line-height: normal;
 }
 
+@media (max-width: 600px) {
+  .cont-mid > h2 {
+    text-align: center;
+  }
+}
+
 .cont-mid > h1 {
   color: #fff;
   font-size: 220px;
   font-weight: 400;
   line-height: normal;
   font-family: Clicker Script;
+}
+
+@media (max-width: 600px) {
+  .cont-mid > h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 .cont-mid > p {
