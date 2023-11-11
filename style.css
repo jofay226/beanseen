@@ -148,7 +148,26 @@ header::before {
   line-height: normal;
 }
 
-.cont-mid > button {
+@media (max-width: 600px) {
+  .cont-mid > p {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cont-mid .btnCont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 50px;
+  }
+}
+
+.cont-mid > div > button {
   width: 134px;
   height: 48px;
   border-radius: 24px;
