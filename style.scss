@@ -90,6 +90,10 @@ header::before {
 
     margin-top: 116px;
 
+    @media (max-width: 600px) {
+      margin-top: 50px;
+    }
+
     & > h2 {
       @include styleText(#fff, 22px, 500, normal);
       @media (max-width: 600px) {
@@ -117,7 +121,7 @@ header::before {
       @media (max-width: 600px) {
         display: flex;
         justify-content: center;
-        margin-top: 50px;
+        // margin-top: 50px;
       }
     }
 

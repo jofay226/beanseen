@@ -110,6 +110,12 @@ header::before {
   margin-top: 116px;
 }
 
+@media (max-width: 600px) {
+  .cont-mid {
+    margin-top: 50px;
+  }
+}
+
 .cont-mid > h2 {
   color: #fff;
   font-size: 22px;
@@ -163,7 +169,6 @@ header::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 50px;
   }
 }
 
