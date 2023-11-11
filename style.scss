@@ -20,20 +20,31 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(6, 5, 5, 0.3);
+  z-index: -1;
 }
 
 .cont {
   max-width: 1300px;
-  width: 100%;
+  //   width: 100%;
   margin: 0 auto;
-  border: 3px solid red;
+
+  padding: 20px;
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    padding: 20px;
+
     ul {
       display: flex;
       list-style-type: none;
@@ -62,6 +73,7 @@ header {
 
       .btn2 {
         @include styleText(#1e1e1e, 14px, 500, normal);
+
         background-color: $btnColor;
         display: inline-block;
         width: 100px;
@@ -70,6 +82,35 @@ header {
         display: grid;
         place-items: center;
       }
+    }
+  }
+
+  &-mid {
+    max-width: 527px;
+
+    margin-top: 116px;
+
+    & > h2 {
+      @include styleText(#fff, 22px, 500, normal);
+    }
+    & > h1 {
+      @include styleText(#fff, 220px, 400, normal);
+      font-family: Clicker Script;
+    }
+
+    & > p {
+      @include styleText(#fff, 20px, 400, normal);
+    }
+
+    & > button {
+      width: 134px;
+      height: 48px;
+      border-radius: 24px;
+      background: #f9c06a;
+      border: none;
+      box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+      margin-top: 20px;
+      @include styleText(#1e1e1e, 16px, 700, normal);
     }
   }
 }

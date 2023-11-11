@@ -18,13 +18,22 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(6, 5, 5, 0.3);
+  z-index: -1;
 }
 
 .cont {
   max-width: 1300px;
-  width: 100%;
   margin: 0 auto;
-  border: 3px solid red;
+  padding: 20px;
 }
 
 .cont nav {
@@ -38,7 +47,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
-  padding: 20px;
 }
 
 .cont nav ul {
@@ -95,5 +103,47 @@ header {
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+.cont-mid {
+  max-width: 527px;
+  margin-top: 116px;
+}
+
+.cont-mid > h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cont-mid > h1 {
+  color: #fff;
+  font-size: 220px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: Clicker Script;
+}
+
+.cont-mid > p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cont-mid > button {
+  width: 134px;
+  height: 48px;
+  border-radius: 24px;
+  background: #f9c06a;
+  border: none;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+          box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+  margin-top: 20px;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
 }
 /*# sourceMappingURL=style.css.map */
