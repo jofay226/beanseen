@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,6 +12,12 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.cont {
+  // border: 2px solid;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 header {
@@ -34,7 +41,7 @@ header::before {
 
 .cont {
   max-width: 1300px;
-  //   width: 100%;
+
   margin: 0 auto;
 
   padding: 20px;
@@ -134,6 +141,436 @@ header::before {
       box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
       margin-top: 20px;
       @include styleText(#1e1e1e, 16px, 700, normal);
+    }
+  }
+}
+
+.section1 {
+  max-width: 1300px;
+  padding: 20px;
+
+  margin: 0 auto;
+  display: grid;
+  // place-items: center;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  &-wrapper {
+    z-index: 2;
+    margin-top: 80px;
+    & > h2 {
+      @include styleText(#603809, 54px, 700, normal);
+      @media (max-width: 900px) {
+        text-align: center;
+      }
+    }
+    & > p {
+      margin-top: 29px;
+      text-align: justify;
+      @include styleText(#707070, 20px, 400, normal);
+    }
+
+    & > button {
+      width: 134px;
+      height: 48px;
+      border-radius: 24px;
+      border: none;
+      background-color: $btnColor;
+      @include styleText(#1e1e1e, 16px, 700, normal);
+      margin-top: 29px;
+      @media (max-width: 900px) {
+        display: block;
+        margin: 29px auto 0px auto;
+      }
+    }
+  }
+
+  & > img {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .blast {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.section2 {
+  margin-top: 150px;
+
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  &-header {
+    text-align: center;
+    @include styleText($coffeeColor, 54px, 700, normal);
+  }
+
+  &-parag {
+    text-align: center;
+    @include styleText(#707070, 20px, 400, 34px);
+    margin-top: 16px;
+  }
+
+  &-cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+    @media (max-width: 800px) {
+      gap: 50px;
+    }
+    &_card {
+      border: 2px solid;
+      background: #fff9f1;
+      height: 364px;
+      position: relative;
+
+      & > img {
+        width: 100%;
+        height: 222px;
+        object-fit: cover;
+        object-position: center;
+      }
+      & > div {
+        padding: 14px 14px 20px 14px;
+      }
+
+      & > div > h3 {
+        font-family: Playfair Display;
+        text-align: center;
+        @include styleText($coffeeColor, 22px, 700, normal);
+      }
+      & > div > h5 {
+        text-align: center;
+        @include styleText(#1e1e1e, 16px, 400, normal);
+      }
+      & > div > h6 {
+        text-align: center;
+        @include styleText($coffeeColor, 18px, 700, normal);
+      }
+
+      & > button {
+        border-radius: 24px;
+        background: $btnColor;
+        width: 134px;
+        height: 48px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        border: none;
+      }
+    }
+  }
+}
+
+.section3 {
+  margin-top: 83px;
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    background-image: url("./img/coffee_blast2.png");
+    position: absolute;
+    right: -200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 478px;
+    height: 261px;
+    z-index: -1;
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & > div > h1 {
+    @include styleText($coffeeColor, 54px, 700, normal);
+    text-align: center;
+  }
+  & > div > h2 {
+    @include styleText($coffeeColor, 25px, 700, normal);
+    text-align: center;
+  }
+
+  & > div > p {
+    @include styleText(#707070, 20px, 400, normal);
+    margin-top: 32px;
+    text-align: center;
+  }
+  & > div > button {
+    @include styleText(#1e1e1e, 16px, 700, normal);
+    width: 134px;
+    height: 48px;
+    border-radius: 24px;
+    background: $btnColor;
+    border: none;
+    margin-top: 24px;
+  }
+
+  & > div > &-slider {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    .section3-slider-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 280px;
+      transition: all 0.3s;
+
+      border: 1px solid rgba(249, 192, 106, 0.42);
+      padding: 35px;
+      background: #fff9f1;
+      & > h2 {
+        @include styleText($coffeeColor, 28px, 700, normal);
+        margin-top: 25px;
+        text-align: center;
+      }
+
+      & > p {
+        @include styleText(#707070, 20px, 700, normal);
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: #ffeed8;
+      }
+    }
+  }
+}
+
+.section4 {
+  background-image: url("./img/Group\ 61.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-top: 54px;
+    @media (max-width: 700px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .section4-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .section4-wrapper > h2 {
+    @include styleText(#fff, 54px, 700, normal);
+    @media (max-width: 700px) {
+      text-align: center;
+      @include styleText(#fff, 44px, 700, normal);
+    }
+  }
+  .section4-wrapper > p {
+    @include styleText(#fff, 20px, 400, 34px);
+    @media (max-width: 700px) {
+      text-align: center;
+      @include styleText(#fff, 15px, 700, normal);
+    }
+  }
+  .section4-wrapper > button {
+    @include styleText(#1e1e1e, 16px, 700, 34px);
+    width: 134px;
+    height: 48px;
+    background: $btnColor;
+    border-radius: 24px;
+    border: none;
+    @media (max-width: 700px) {
+      margin: 0 auto;
+    }
+
+    box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+  }
+  & > div > .section4-wrapper {
+  }
+  & > div > .section4-wrapperImg {
+    @media (max-width: 700px) {
+      width: 230px;
+      margin-top: 40px;
+    }
+  }
+}
+
+.section5 {
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h2 {
+      @include styleText($coffeeColor, 54px, 700, normal);
+      text-align: center;
+    }
+    & > p {
+      @include styleText(#707070, 20px, 400, normal);
+      text-align: center;
+    }
+  }
+
+  .section5-card {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    &-left {
+      width: 82px;
+      height: 82px;
+      position: relative;
+      left: 10px;
+    }
+    & > div {
+      max-width: 980px;
+      width: 100%;
+
+      border: 1px solid rgba(249, 192, 106, 0.42);
+
+      background: #fff9f1;
+    }
+    & > div:first-child {
+    }
+    & > div > p {
+    }
+    & > div:last-child {
+    }
+
+    &-right {
+      width: 82px;
+      height: 82px;
+    }
+  }
+}
+
+.section5 {
+  // .section5__card
+
+  &__card {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+
+    & > div > p {
+      @include styleText(#707070, 18px, 600, 36px);
+      text-align: justify;
+    }
+    & > div > h3 {
+      @include styleText($coffeeColor, 32px, 700, normal);
+      text-align: center;
+    }
+
+    & > div {
+      border: 1px solid rgba(249, 192, 106, 0.42);
+      padding: 30px;
+      background: #fff9f1;
+      margin: 0 -40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .imgLeft {
+        align-self: flex-start;
+      }
+
+      .imgRight {
+        position: relative;
+        bottom: -70px;
+      }
+    }
+  }
+
+  // .section5__card-left
+
+  &__card-left {
+    width: 82px;
+    height: 82px;
+    z-index: 2;
+  }
+
+  // .section5__card-right
+
+  &__card-right {
+    width: 82px;
+    height: 82px;
+  }
+}
+
+.subscribe {
+  background-image: url("./img/Group\ 46.png");
+  min-height: 50vh;
+  margin-top: 82px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    gap: 25px;
+  }
+
+  // .subscribe__header
+
+  &__header {
+    @include styleText(#fff, 54px, 700, normal);
+    text-align: center;
+    @media (max-width: 600px) {
+      @include styleText(#fff, 34px, 700, normal);
+    }
+  }
+
+  // .subscribe__parag
+
+  &__parag {
+    @include styleText(#fff, 20px, 400, normal);
+    text-align: center;
+  }
+
+  // .subscribe__inputWrapper
+
+  &__inputWrapper {
+    max-width: 642px;
+    width: 100%;
+    height: 66px;
+
+    border-radius: 4px;
+    border: 1px solid rgba(249, 192, 106, 0.42);
+
+    background: #fff9f1;
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    & > input {
+      padding: 10px;
+      outline: none;
+      border: none;
+    }
+    & > button {
+      border-radius: 4px;
+      background: #f9c06a;
+      border: none;
+      box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+      @include styleText($coffeeColor, 22px, 700, normal);
+      @media (max-width: 700px) {
+        @include styleText($coffeeColor, 13px, 700, normal);
+      }
     }
   }
 }
